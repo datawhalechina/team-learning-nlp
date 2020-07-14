@@ -32,7 +32,9 @@ FastText是一种典型的深度学习词向量的表示方法，它非常简单
 
 所以FastText是一个三层的神经网络，输入层、隐含层和输出层。
 
-<img src="img/fast_text.png" alt="fasttext" style="zoom:50%;" />
+
+![fast_text](https://img-blog.csdnimg.cn/20200714204856589.png)
+
 
 下图是使用keras实现的FastText网络结构：
 
@@ -123,12 +125,4 @@ for i in range(total):
 
 - 阅读FastText的文档，尝试修改参数，得到更好的分数
 - 基于验证集的结果调整超参数，使得模型性能更优
-
-
-
-
-
-
-
-
 
