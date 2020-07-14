@@ -34,7 +34,7 @@ word2vec的主要思路：通过单词和上下文彼此预测，对应的两个
 
 Word2Vec模型中，主要有Skip-Gram和CBOW两种模型，从直观上理解，Skip-Gram是给定input word来预测上下文。而CBOW是给定上下文，来预测input word。
 
-<img src="img/skip_grams.png" alt="图片" style="zoom:50%;" />
+![skip_grams](https://img-blog.csdnimg.cn/20200714210354729.png)
 
 Word2Vec模型实际上分为了两个部分，第一部分为建立模型，第二部分是通过模型获取嵌入词向量。
 
@@ -54,9 +54,11 @@ Skip-grams过程
 
 我们将通过给神经网络输入文本中成对的单词来训练它完成上面所说的概率计算。下面的图中给出了一些我们训练样本的例子。我们选定句子“The quick brown fox jumps over lazy dog”，设定我们的窗口大小为2（window_size=2），也就是说我们仅选输入词前后各两个词和输入词进行组合。下图中，蓝色代表input word，方框内代表位于窗口内的单词。
 
-<img src="img/1.png" alt="图片" style="zoom:50%;" />
+![1](https://img-blog.csdnimg.cn/20200714210458879.png)
 
-<img src="img/2.png" alt="图片" style="zoom:50%;" />
+
+
+![2](https://img-blog.csdnimg.cn/20200714210519939.png)
 
 我们的模型将会从每对单词出现的次数中习得统计结果。例如，我们的神经网络可能会得到更多类似（“Soviet“，”Union“）这样的训练样本对，而对于（”Soviet“，”Sasquatch“）这样的组合却看到的很少。因此，当我们的模型完成训练后，给定一个单词”Soviet“作为输入，输出的结果中”Union“或者”Russia“要比”Sasquatch“被赋予更高的概率。
 
@@ -88,7 +90,7 @@ PS：input word和output word都会被我们进行one-hot编码。仔细想一�
 
 在上一部分中，对于原始文本为“The quick brown fox jumps over the laze dog”，如果使用大小为2的窗口，那么我们可以得到图中展示的那些训练样本。
 
- <img src="img/1.png" alt="图片" style="zoom:50%;" />
+![1](https://img-blog.csdnimg.cn/20200714210458879.png)
 
 但是对于“the”这种常用高频单词，这样的处理方式会存在下面两个问题：
 
@@ -152,7 +154,7 @@ PS: 在论文中，作者指出指出对于小规模数据集，选择5-20个neg
 
  首先是最小的b和f合并，得到的新树根节点权重是7.此时森林里5棵树，根节点权重分别是16，8，6，20，7。此时根节点权重最小的6，7合并，得到新子树，依次类推，最终得到下面的霍夫曼树。
 
-<img src="img/3.png" alt="图片" style="zoom:50%;" />
+![3](https://img-blog.csdnimg.cn/20200714210647687.png)
 
 那么霍夫曼树有什么好处呢？一般得到霍夫曼树后我们会对叶子节点进行霍夫曼编码，由于权重高的叶子节点越靠近根节点，而权重低的叶子节点会远离根节点，这样我们的高权重节点编码值较短，而低权重值编码值较长。这保证的树的带权路径最短，也符合我们的信息论，即我们希望越常用的词拥有更短的编码。如何编码呢？一般对于一个霍夫曼树的节点（根节点除外），可以约定左子树编码为0，右子树编码为1。如上图，则可以得到c的编码是00。
 
@@ -218,8 +220,7 @@ TextCNN利用CNN（卷积神经网络）进行文本特征抽取，不同大小�
 TextRNN利用RNN（循环神经网络）进行文本特征抽取，由于文本本身是一种序列，而LSTM天然适合建模序列数据。TextRNN将句子中每个词的词向量依次输入到双向双层LSTM，分别将两个方向最后一个有效位置的隐藏层拼接成一个向量作为文本的表示。
 
 
-
-<img src="img/5.png" alt="textRNN &amp; textCNN 的网络结构与代码实现！ - GeekMeta 极客元素- 区块 ..." style="zoom:50%;" />
+![5](https://img-blog.csdnimg.cn/20200714210806492.png)
 
 ### 基于TextCNN、TextRNN的文本表示
 
