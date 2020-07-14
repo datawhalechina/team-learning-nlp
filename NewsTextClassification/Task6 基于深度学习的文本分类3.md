@@ -35,7 +35,7 @@ Self-Attention中使用多头机制，使得不同的attention heads所关注的
 
 编码器结构中值得提出注意的一个细节是，在每个子层中（Self-attention, FFNN），都有残差连接，并且紧跟着[layer-normalization](https://arxiv.org/abs/1607.06450)。如果我们可视化向量和LayerNorm操作，将如下所示：
 
-![img](img/kAxZ99CniEh21Q4Y.png)
+![](https://img-blog.csdnimg.cn/20200714211955713.png)
 
 #### 基于预训练语言模型的词表示
 
