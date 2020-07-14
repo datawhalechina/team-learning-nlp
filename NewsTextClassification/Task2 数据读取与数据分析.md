@@ -27,7 +27,8 @@ train_df = pd.read_csv('../input/train_set.csv', sep='\t', nrows=100)
 - 分隔符`sep`，为每列分割的字符，设置为`\t`即可；
 - 读取行数`nrows`，为此次读取文件的函数，是数值类型（由于数据集比较大，建议先设置为100）；
 
-<img src="img/task2_train_head.png" alt="task2_train_head" style="zoom:50%;" />
+
+![task2_train_head](https://img-blog.csdnimg.cn/20200714203730739.png)
 
 上图是读取好的数据，是表格的形式。第一列为新闻的类别，第二列为新闻的字符。
 
@@ -80,7 +81,7 @@ plt.xlabel('Text char count')
 plt.title("Histogram of char count")
 ```
 
-<img src="img/task2_char_hist.png" alt="task2_char_hist" style="zoom:36%;" />
+![task2_char_hist](https://img-blog.csdnimg.cn/20200714203836905.png)
 
 #### 新闻类别分布
 
@@ -92,7 +93,7 @@ plt.title('News class count')
 plt.xlabel("category")
 ```
 
-<img src="img/task2_class_hist.png" alt="task2_class_hist" style="zoom:36%;" />
+![task2_class_hist](https://img-blog.csdnimg.cn/20200714203929296.png)
 
 在数据集中标签的对应的关系如下：{'科技': 0, '股票': 1, '体育': 2, '娱乐': 3, '时政': 4, '社会': 5, '教育': 6, '财经': 7, '家居': 8, '游戏': 9, '房产': 10, '时尚': 11, '彩票': 12, '星座': 13}
 
@@ -162,12 +163,4 @@ print(word_count[2])
 
 1. 假设字符3750，字符900和字符648是句子的标点符号，请分析赛题每篇新闻平均由多少个句子构成？
 2. 统计每类新闻中出现次数对多的字符
-
-
-
-
-
-
-
-
 
