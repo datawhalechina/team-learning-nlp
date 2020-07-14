@@ -2,8 +2,8 @@
 
 主要包括：
 
+- [自然语言处理入门](https://github.com/datawhalechina/team-learning-nlp/tree/master/IntroductionToNLP)
 - [自然语言处理实践（新闻文本分类）](https://github.com/datawhalechina/team-learning-nlp/tree/master/NewsTextClassification)
-- 自然语言入门
 - 知识图谱入门
 
 
