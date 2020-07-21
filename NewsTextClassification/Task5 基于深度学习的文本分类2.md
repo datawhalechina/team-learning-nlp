@@ -54,8 +54,9 @@ Skip-grams过程
 
 我们将通过给神经网络输入文本中成对的单词来训练它完成上面所说的概率计算。下面的图中给出了一些我们训练样本的例子。我们选定句子“The quick brown fox jumps over lazy dog”，设定我们的窗口大小为2（window_size=2），也就是说我们仅选输入词前后各两个词和输入词进行组合。下图中，蓝色代表input word，方框内代表位于窗口内的单词。
 
-![1](https://img-blog.csdnimg.cn/20200714210458879.png)
 
+
+![1](https://img-blog.csdnimg.cn/20200721190035764.png)
 
 
 ![2](https://img-blog.csdnimg.cn/20200714210519939.png)
