@@ -41,7 +41,7 @@
 
        Lee 等 提出了利用多层 conv 和 pooling 和 highway layer 的方式来解决该问题，其结构如下所示：
 
-       ![Fully character-level neural machine translation without explicit segmentation](img/Lee.png)
+       ![t3_2](https://img-blog.csdnimg.cn/20200816184445107.png)
 
        该论文的思路如下所示：
 
@@ -156,9 +156,9 @@ FAIR的FastText就是利用subword将word2vec扩充，有效的构建embedding�
 
 将每个 word 表示成 bag of character n-gram 以及单词本身的集合，例如对于where这个单词和n=3的情况，它可以表示为 <wh,whe,her,ere,re>,<where> ，其中"<",">"为代表单词开始与结束的特殊标记。
 
-假设对于word $w$ ，其n-gram集合用 $G_w$ 表示，每个n-gram的矢量表示为![](img/zg.png),则每个单词可以表示成其所有n-gram的矢量和的形式，而center word $w$ 与context word $c$ 的分数就可表示成
+假设对于word $w$ ，其n-gram集合用 $G_w$ 表示，每个n-gram的矢量表示为![t3_3](https://img-blog.csdnimg.cn/20200816184503931.png),则每个单词可以表示成其所有n-gram的矢量和的形式，而center word $w$ 与context word $c$ 的分数就可表示成
 
-![](img/20200528133755.png)
+![t3_1](https://img-blog.csdnimg.cn/20200816184428907.png#pic_center)
 
 之后就可以按照经典的word2vec算法训练得到这些特征向量。
 
