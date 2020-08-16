@@ -1,7 +1,5 @@
 # CS224N Word Vectors 2 and Word Senses
 
-> 作者：Raymond
-
 ## 引言
 
 Word2vec回顾、优化、基于统计的词向量、GloVe、词向量评价、词义
@@ -11,7 +9,7 @@ Word2vec回顾、优化、基于统计的词向量、GloVe、词向量评价、�
 
 词向量目的：希望通过低维稠密向量来表示词的含义
 
-![image-20200608200456313](img/20200608200456313.png)
+![t2](https://img-blog.csdnimg.cn/20200816182731204.png)
 
 课程中举了一个例子：三个句子，比如对于like这个词，在三个句子中，其左右共出现2次I，1次deep和1次NLP，所以like对应的词向量中，I、deep和NLP维的值分别为2,1,1。
 
@@ -75,10 +73,14 @@ loss function的基本形式就是最简单的mean square loss，只不过在此
 - 如果两个单词没有在一起出现，也就是$X_{i j}$,那么他们应该不参与到loss function的计算当中去，也就是f(x)要满足f(x)=0
 
 为此，作者提出了以下权重函数：
+
+
 $$
 f(x)=\left\{\begin{array}{cc}
 \left(x / x_{\max }\right)^{\alpha} & \text { if } x<x_{\text {max }} \\
 1 & \text { otherwise }
 \end{array}\right.
 $$
+
+
 实验中作者设定$x_{\max }=100$，并且发现$\alpha=3 / 4$时效果比较好。
