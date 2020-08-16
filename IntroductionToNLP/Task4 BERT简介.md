@@ -1,7 +1,5 @@
 # 浅谈ELMO，GPT，BERT模型
 
-> 作者：江湖散人
-
 [BERT视频讲解：金金金](https://www.bilibili.com/video/BV17t4y1y7mT/)
 
 ## 引言
@@ -73,7 +71,9 @@ $$
 
 对于每一个token，一个L层的biLM模型要计算出共2*L*+1个表征： 
 
-![image-20200607202244219](https://pirctures.oss-cn-beijing.aliyuncs.com/img/image-20200607202244219.png)第二个“=”可以理解为：
+![image-20200607202244219](https://pirctures.oss-cn-beijing.aliyuncs.com/img/image-20200607202244219.png)
+
+第二个“=”可以理解为：
 
 当 j=0 时，代表token层。当 j>0 时，同时包括两个方向的hidden表征。
 
