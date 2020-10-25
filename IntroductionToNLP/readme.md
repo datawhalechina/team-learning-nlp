@@ -92,5 +92,6 @@
 姚鑫||
 刘瑞航||
 康兵兵||
+张贤|[Github](https://github.com/zhangxiann),[知乎](https://www.zhihu.com/people/zhangxiann/posts)|哈尔滨工程大学硕士
 
 
