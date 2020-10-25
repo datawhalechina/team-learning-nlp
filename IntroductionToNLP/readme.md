@@ -1,4 +1,7 @@
-﻿# 自然语言处理入门
+﻿
+
+
+# 自然语言处理入门
 
 ## 基本信息
 
@@ -76,23 +79,18 @@
 1. [CS224n 课程主页](http://web.stanford.edu/class/cs224n/index.html)
 2. [CS224n 中英视频](https://www.bilibili.com/video/BV1s4411N7fC)
 
+
 ---
 ## 贡献人员
 
-**1. 杨开漠**
-- 五邑大学计算机硕士
-- Github：https://github.com/km1994
 
-**2. 雷钲仪**
-- 华东师范大学硕士
+姓名 | 博客|备注
+---|---|---
+杨开漠 | [Github](https://github.com/km1994)|五邑大学计算机硕士
+雷钲仪 | |华东师范大学硕士
+但扬杰 | [CSDN](https://me.csdn.net/jianghusanren3),[Github](https://github.com/jianghusanren007)|
+姚鑫||
+刘瑞航||
+康兵兵||
 
-**3. 但扬杰**
-- CSDN账号：https://me.csdn.net/jianghusanren3
-- github账号：https://github.com/jianghusanren007
-
-**4. 姚鑫**
-
-**5. 刘瑞航**
-
-**6. 康兵兵**
 
