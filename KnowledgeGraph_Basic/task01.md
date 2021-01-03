@@ -1,6 +1,6 @@
 # Datawhale 知识图谱组队学习 之 Task 1 知识图谱介绍
 
-> 文章编写人：吴晓均<br/>
+> 文章编写人：吴晓均、康兵兵<br/>
 > github 地址：
 
 ## 目录
@@ -229,7 +229,7 @@ Neo4J提供了一个用户友好的 Web 界面，可以进行各项配置、写�
 
 ### 5.1 引言
 
-这个案例的节点主要包括人物和城市两类，人物和人物之间有朋友、夫妻等关系，人物和城市之间有出生地的关系。
+这个案例的节点主要包括人物和城市两类，人物和人物之间有朋友、夫妻等关系，人物和城市之间有出生地的关系。特别鸣谢知乎@异尘[手把手教你快速入门知识图谱 - Neo4J教程](https://zhuanlan.zhihu.com/p/88745411)
 
 - Person-Friends-PERSON
 - Person-Married-PERSON
@@ -270,7 +270,7 @@ Neo4J提供了一个用户友好的 Web 界面，可以进行各项配置、写�
 
 如图 15 所示，6个人物节点创建成功
 
-![image](https://pic1.zhimg.com/80/v2-0dfa4f82a0f1b710f814d653bad85568_720w.jpg)
+![image](https://i.loli.net/2021/01/03/W4RwifuO7MhDjdI.png)
 > 图 15 创建 人物节点
 
 4. 创建地区节点
@@ -287,7 +287,7 @@ Neo4J提供了一个用户友好的 Web 界面，可以进行各项配置、写�
 
 如图 16 所示，共有6个人物节点、5个地区节点，Neo4J贴心地使用不用的颜色来表示不同类型的节点。
 
-![image](https://pic1.zhimg.com/80/v2-39890877ca54748f24ab4c3211d11510_720w.jpg)
+![image](https://i.loli.net/2021/01/03/uGaBt1MQ7jksXnE.png)
 > 图 16 创建地区节点
 
 ### 5.3 创建关系
@@ -322,7 +322,7 @@ Neo4J提供了一个用户友好的 Web 界面，可以进行各项配置、写�
 
 这样，图谱就已经建立好了：
 
-![image](https://pic2.zhimg.com/80/v2-955b7f17c2c3e4be847726228006a005_720w.jpg)
+![image.png](https://i.loli.net/2021/01/03/MtrHeLFakZc3w6N.png)
 > 图 17 图谱
 
 ### 5.4 创建 出生地关系
@@ -348,7 +348,7 @@ Neo4J提供了一个用户友好的 Web 界面，可以进行各项配置、写�
 ```
 最终该图谱如下图所示：
 
-![image](https://pic4.zhimg.com/80/v2-ecbdeac21cc6dff47fb1b824757b7d17_720w.jpg)
+![image.png](https://i.loli.net/2021/01/03/Hr7T5iOPNcIERfh.png)
 > 图 18 图谱
 
 ### 5.5 图数据库查询
@@ -360,7 +360,7 @@ Neo4J提供了一个用户友好的 Web 界面，可以进行各项配置、写�
 ```
 结果如图 19：
 
-![image](https://pic2.zhimg.com/80/v2-fa8ab8074aaa811f7c1b95f7bf96f1dd_720w.jpg)
+![image.png](https://i.loli.net/2021/01/03/Kxp5R2ybON9etlQ.png)
 > 图 19 查询下所有在Boston出生的人物
 
 2. 查询所有对外有关系的节点
@@ -370,7 +370,7 @@ Neo4J提供了一个用户友好的 Web 界面，可以进行各项配置、写�
 ```
 结果如图 20：
 
-![查询所有对外有关系的节点](https://pic3.zhimg.com/80/v2-e34f0e9adb7cefd59e26c16eec88e422_720w.jpg)
+![查询所有对外有关系的节点](https://i.loli.net/2021/01/03/WjCsr4aLnO1kvo7.png)
 > 图 20 查询所有对外有关系的节点
 
 3. 查询所有有关系的节点
@@ -380,7 +380,7 @@ Neo4J提供了一个用户友好的 Web 界面，可以进行各项配置、写�
 ```
 结果如图21：
 
-![image](https://pic3.zhimg.com/80/v2-e34f0e9adb7cefd59e26c16eec88e422_720w.jpg)
+![image.png](https://i.loli.net/2021/01/03/WjCsr4aLnO1kvo7.png)
 > 图 21 查询所有有关系的节点
 
 4. 查询所有对外有关系的节点，以及关系类型
@@ -391,7 +391,7 @@ Neo4J提供了一个用户友好的 Web 界面，可以进行各项配置、写�
 
 结果如图22：
 
-![image](https://pic1.zhimg.com/80/v2-ac2a3c82ddfef52ee487b7efb59c9548_720w.jpg)
+![image.png](https://i.loli.net/2021/01/03/WjCsr4aLnO1kvo7.png)
 > 图 22 查询所有对外有关系的节点，以及关系类型
 
 5. 查询所有有结婚关系的节点
@@ -402,7 +402,7 @@ Neo4J提供了一个用户友好的 Web 界面，可以进行各项配置、写�
 
 结果如图 23：
 
-![image](https://pic3.zhimg.com/80/v2-e7850b5800fe28e628eda23b25ded3c6_720w.png)
+![image.png](https://i.loli.net/2021/01/03/DU9gAIHnlxY4WkM.png)
 > 图 23 查询所有有结婚关系的节点
 
 6. 查找某人的朋友的朋友
@@ -412,7 +412,7 @@ Neo4J提供了一个用户友好的 Web 界面，可以进行各项配置、写�
 ```
 返回Mike的朋友的朋友，结果如图 24：
 
-![image](https://pic4.zhimg.com/80/v2-8630e2f27bb7bc7551a9699a4a4f6d73_720w.png)
+![image.png](https://i.loli.net/2021/01/03/egoTxlC36Dbarv9.png)
 > 图 24 查找某人的朋友的朋友
 
 ### 5.6 删除和修改
@@ -503,7 +503,8 @@ py2neo模块符合python的习惯，写着感觉顺畅，其实可以完全不�
 
 ## 七、通过csv文件批量导入图数据
 
-前面学习的是单个创建节点，不适合大批量导入。这里我们使用neo4j-admin import命令导入，其他导入方法也可以参考[Neo4j之导入数据](https://zhuanlan.zhihu.com/p/93746655)
+前面学习的是单个创建节点，不适合大批量导入。这里我们介绍使用neo4j-admin import命令导入，适合部署在docker环境下的neo4j。
+其他导入方法也可以参考[Neo4j之导入数据](https://zhuanlan.zhihu.com/p/93746655)
 
 csv分为两个nodes.csv和relations.csv，注意关系里的起始节点必须是在nodes.csv里能找到的：
 
