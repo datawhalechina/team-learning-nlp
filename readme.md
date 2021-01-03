@@ -4,6 +4,7 @@
 
 主要包括：
 - [自然语言处理入门](https://github.com/datawhalechina/team-learning-nlp/tree/master/IntroductionToNLP)
+- [自然语言处理实践（知识图谱）](https://github.com/datawhalechina/team-learning-nlp/tree/master/KnowledgeGraph_Basic)
 - [自然语言处理实践（新闻文本分类）](https://github.com/datawhalechina/team-learning-nlp/tree/master/NewsTextClassification)
 
 
