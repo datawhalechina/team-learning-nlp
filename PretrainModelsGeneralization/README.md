@@ -4,7 +4,7 @@
 
 比赛地址：https://tianchi.aliyun.com/competition/entrance/531865/introduction
 
-开源内容：https://github.com/datawhalechina/team-learning-nlp/master/PretrainModelsGeneralization
+开源内容：https://github.com/datawhalechina/team-learning-nlp/tree/master/PretrainModelsGeneralization
 
 ### Task00：熟悉规则（1天）
 
