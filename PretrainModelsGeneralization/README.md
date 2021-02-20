@@ -2,9 +2,9 @@
 
 开营时间：02月16日21:00
 
-比赛地址：https://tianchi.aliyun.com/s/d3bcf37c856703fec5903c40ea323710
+比赛地址：https://tianchi.aliyun.com/competition/entrance/531865/introduction
 
-开源内容：https://github.com/datawhalechina/team-learning-data-mining/tree/master/WeatherOceanForecasts
+开源内容：https://github.com/datawhalechina/team-learning-nlp/edit/master/PretrainModelsGeneralization
 
 ### Task00：熟悉规则（1天）
 
