@@ -14,9 +14,7 @@
 本次新人赛是Datawhale与天池联合发起的0基础入门系列赛事 —— 零基础入门语音识别之食物声音识别。赛题以语音识别为背景，要求选手使用给定的音频数据集进行建模，并完成食物声音识别任务。为更好的引导大家入门，我们为本赛题定制了学习任务。通过对本方案的完整学习，可以帮助掌握数据分析基本技能。
 
 ## 数据集说明
-数据集来自Kaggle的“[Eating Sound Collection](https://www.kaggle.com/mashijie/eating-sound-collection)”（[可商用](https://opendatacommons.org/licenses/pddl/1-0/)），数据集中包含20种不同食物的咀嚼声音，赛题任务是给这些声音数据建模，准确分类。
-
-作为零基础入门语音识别的新人赛，本次任务不涉及复杂的声音模型、语言模型，希望大家通过两种baseline的学习能体验到语音识别的乐趣。
+数据集来自Kaggle的“[Eating Sound Collection](https://www.kaggle.com/mashijie/eating-sound-collection)”（[可商用](https://opendatacommons.org/licenses/pddl/1-0/)），数据集中包含20种不同食物的咀嚼声音，赛题任务是给这些声音数据建模，准确分类。作为零基础入门语音识别的新人赛，本次任务不涉及复杂的声音模型、语言模型，希望大家通过两种baseline的学习能体验到语音识别的乐趣。
 
 ## 任务说明
 我们提供了两种Baseline供大家学习。
