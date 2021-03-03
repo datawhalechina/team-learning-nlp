@@ -37,3 +37,6 @@
 - [语音识别基本方法](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI2MzU4NDI4NA==&action=getalbum&album_id=1472128841614753794&scene=173&from_msgid=2247484000&from_itemidx=1&count=3#wechat_redirect)
 - [微软Edx语音识别课程](http://fancyerii.github.io/2019/05/25/dev287x/)
 - [使用带有Keras的卷积神经网络的城市声音分类](https://medium.com/gradientcrescent/urban-sound-classification-using-convolutional-neural-networks-with-keras-theory-and-486e92785df4)
+
+## 关注我们
+<div align=center><img src="https://raw.githubusercontent.com/datawhalechina/pumpkin-book/master/res/qrcode.jpeg" width = "250" height = "270" alt="Datawhale是一个专注AI领域的开源组织，以“for the learner，和学习者一起成长”为愿景，构建对学习者最有价值的开源学习社区。关注我们，一起学习成长。"></div>
