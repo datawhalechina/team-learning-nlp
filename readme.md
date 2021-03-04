@@ -7,7 +7,7 @@
 - [自然语言处理实践（知识图谱）](https://github.com/datawhalechina/team-learning-nlp/tree/master/KnowledgeGraph_Basic)
 - [自然语言处理实践（新闻文本分类）](https://github.com/datawhalechina/team-learning-nlp/tree/master/NewsTextClassification)
 - [自然语言处理实践（中文预训练模型）](https://github.com/datawhalechina/team-learning-nlp/tree/master/PretrainModelsGeneralization)
-- [城市声音识别](https://github.com/datawhalechina/team-learning-nlp/tree/master/UrbanVoiceRecognition)
+- [自然语言处理实践（食物声音识分类）](https://github.com/datawhalechina/team-learning-nlp/tree/master/UrbanVoiceRecognition)
 
 
 
