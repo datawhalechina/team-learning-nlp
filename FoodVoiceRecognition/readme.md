@@ -7,12 +7,12 @@
 数据集来自Kaggle的“[Eating Sound Collection](https://www.kaggle.com/mashijie/eating-sound-collection)”（[可商用](https://opendatacommons.org/licenses/pddl/1-0/)），数据集中包含20种不同食物的咀嚼声音，赛题任务是给这些声音数据建模，准确分类。作为零基础入门语音识别的新人赛，本次任务不涉及复杂的声音模型、语言模型，希望大家通过两种baseline的学习能体验到语音识别的乐趣。
 
 ## 任务说明
-- Task1 食物声音识别之Baseline学习
-- Task2 食物声音识别之赛题数据介绍与分析
-- Task3 食物声音识别之音频数据特征提取
-- Task4 食物声音识别之深度学习模型搭建、训练、验证
-- Task5 食物声音识别之模型改进与优化
-- Task6 拓展阅读：语音识别基础知识介绍
+- [Task1 食物声音识别之Baseline学习](https://github.com/datawhalechina/team-learning-nlp/tree/master/FoodVoiceRecognition/Task1%20%E9%A3%9F%E7%89%A9%E5%A3%B0%E9%9F%B3%E8%AF%86%E5%88%AB%E4%B9%8BBaseline%E5%AD%A6%E4%B9%A0)
+- [Task2 食物声音识别之赛题数据介绍与分析](https://github.com/datawhalechina/team-learning-nlp/tree/master/FoodVoiceRecognition/Task2%20%E9%A3%9F%E7%89%A9%E5%A3%B0%E9%9F%B3%E8%AF%86%E5%88%AB%E4%B9%8B%E8%B5%9B%E9%A2%98%E6%95%B0%E6%8D%AE%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%88%86%E6%9E%90)
+- [Task3 食物声音识别之音频数据特征提取](https://github.com/datawhalechina/team-learning-nlp/tree/master/FoodVoiceRecognition/Task3%20%E9%A3%9F%E7%89%A9%E5%A3%B0%E9%9F%B3%E8%AF%86%E5%88%AB%E4%B9%8B%E9%9F%B3%E9%A2%91%E6%95%B0%E6%8D%AE%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96)
+- [Task4 食物声音识别之深度学习模型搭建、训练、验证](https://github.com/datawhalechina/team-learning-nlp/tree/master/FoodVoiceRecognition/Task4%20%E9%A3%9F%E7%89%A9%E5%A3%B0%E9%9F%B3%E8%AF%86%E5%88%AB%E4%B9%8B%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B%E6%90%AD%E5%BB%BA%E4%B8%8E%E8%AE%AD%E7%BB%83)
+- [Task5 食物声音识别之模型改进与优化](https://github.com/datawhalechina/team-learning-nlp/tree/master/FoodVoiceRecognition/Task5%20%E9%A3%9F%E7%89%A9%E5%A3%B0%E9%9F%B3%E8%AF%86%E5%88%AB%E4%B9%8B%E6%A8%A1%E5%9E%8B%E6%94%B9%E8%BF%9B%E4%B8%8E%E4%BC%98%E5%8C%96)
+- [Task6 拓展阅读：语音识别基础知识介绍](https://github.com/datawhalechina/team-learning-nlp/tree/master/FoodVoiceRecognition/Task6%20%E6%8B%93%E5%B1%95%E9%98%85%E8%AF%BB%EF%BC%9A%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%BB%8B%E7%BB%8D)
 
 ## 贡献者信息
 | 姓名                                                         | 介绍                                                         | 个人主页                                                         |
