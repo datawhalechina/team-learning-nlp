@@ -24,6 +24,16 @@
 | 付文豪 | Datawhale成员  |         |
 | 马琦钧 |Datawhale成员 |       |
 
+## 项目贡献情况
+项目构建与整合：阿水、黎佳佳
+task1：陈安东、但扬杰
+task2：黎佳佳
+task3：陈安东、黎佳佳
+task4：陈安东
+task5：付文豪
+task6：马琦钧
+
+
 ## 致谢
 - [语音识别基本方法](https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI2MzU4NDI4NA==&action=getalbum&album_id=1472128841614753794&scene=173&from_msgid=2247484000&from_itemidx=1&count=3#wechat_redirect)
 - [微软Edx语音识别课程](http://fancyerii.github.io/2019/05/25/dev287x/)
