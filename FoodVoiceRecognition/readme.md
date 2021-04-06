@@ -45,7 +45,7 @@
 | 黎佳佳 |Datawhale成员 |  公众号：ICE的小窝   |
 | 但扬杰 | 江西师范大学软件工程硕士，Datawhale成员 |  [github账号](https://github.com/jianghusanren007)    |
 | 陈安东 | 中央民族大学，Datawhale成员 |   [知乎主页](https://www.zhihu.com/people/wang-ya-fei-48)    |
-| 付文豪 | Datawhale成员  |         |
+| 付文豪 |   |         |
 | 马琦钧 |Datawhale成员 |       |
 
 ## 项目贡献情况
