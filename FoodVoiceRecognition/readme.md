@@ -25,8 +25,8 @@
 
 - [Task4 食物声音识别之深度学习模型搭建、训练、验证](https://github.com/datawhalechina/team-learning-nlp/tree/master/FoodVoiceRecognition/Task4%20%E9%A3%9F%E7%89%A9%E5%A3%B0%E9%9F%B3%E8%AF%86%E5%88%AB%E4%B9%8B%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B%E6%90%AD%E5%BB%BA%E4%B8%8E%E8%AE%AD%E7%BB%83)
 
-- 基于CNN的模型搭建、训练与验证
-- 了解CNN原理
+  - 基于CNN的模型搭建、训练与验证
+  - 了解CNN原理
 
 - [Task5 食物声音识别之模型改进与优化](https://github.com/datawhalechina/team-learning-nlp/tree/master/FoodVoiceRecognition/Task5%20%E9%A3%9F%E7%89%A9%E5%A3%B0%E9%9F%B3%E8%AF%86%E5%88%AB%E4%B9%8B%E6%A8%A1%E5%9E%8B%E6%94%B9%E8%BF%9B%E4%B8%8E%E4%BC%98%E5%8C%96)
 
