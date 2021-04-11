@@ -1,8 +1,0 @@
-sox_audio.sh：
-在提取mfcc特征时发现有近一半音频无法成功提取，所以用sox音频工具将语音进行格式统一处理。
-
-extract_mfcc_datawhale.py：
-用来提取mfcc特征，一段语音对应生成一个npy文件，存放在clips_rd_mfcc文件夹中。
-
-write_json_datawhale.py：
-训练集和测试集的分布，存放在对应的json文件中，见dump文件夹中。
