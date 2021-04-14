@@ -83,3 +83,5 @@ conda install pytorch==1.1.0 torchvision==0.3.0 cudatoolkit=9.0 -c pytorch
 ## 特别说明
 
 因为本系统考虑的东西较为完善，所以写的比较复杂，有些代码对整体没有很大作用但也写上去了，例如solver.py中的def _reset(self)函数功能是加载上次训练的模型继续训练，以免从头开始训练浪费时间。但是本baseline训练速度很短，因此没用到此功能；再例如train.py中定义参数parser.add_argument，有一些参数后面没有用到；再例如data.py中的def build_LFR_features(inputs, m, n)功能是堆叠m帧以及跳n帧，因为语音是连续的，堆叠m帧的mfcc特征说不定效果更好。当然，此处我们将m，n都取为1，所以也没有用到此功能，有兴趣的同学可以进行不同的尝试；再例如extract_mfcc_datawhale.py中提供了提取两种特征(mfcc，log-mel)函数，大家可以选择其一或者笔者没有提及的特征，例如fbank。
+
+本项目参考项目《Speech Transformer: End-to-End ASR with Transformer》进行修改而来，感谢原项目作者大大开源的优秀项目。 Reference https://github.com/zhaoyi2/Speech-Transformer
