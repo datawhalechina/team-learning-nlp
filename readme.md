@@ -3,11 +3,12 @@
 本项目主要存储Datawhale组队学习中“自然语言处理”方向的资料。
 
 主要包括：
+
+- [图神经网络](https://github.com/datawhalechina/team-learning-nlp/tree/master/GNN)
 - [自然语言处理入门](https://github.com/datawhalechina/team-learning-nlp/tree/master/IntroductionToNLP)
 - [自然语言处理实践（知识图谱）](https://github.com/datawhalechina/team-learning-nlp/tree/master/KnowledgeGraph_Basic)
 - [自然语言处理实践（新闻文本分类）](https://github.com/datawhalechina/team-learning-nlp/tree/master/NewsTextClassification)
-- [自然语言处理实践（中文预训练模型）](https://github.com/datawhalechina/team-learning-nlp/tree/master/PretrainModelsGeneralization)
-- [自然语言处理实践（食物声音识分类）](https://github.com/datawhalechina/team-learning-nlp/tree/master/FoodVoiceRecognition)
+- [零基础入门语音识别（食物声音识别）](https://github.com/datawhalechina/team-learning-nlp/tree/master/FoodVoiceRecognition)
 
 
 
