@@ -2,23 +2,22 @@
 
 ## 一、引言
 
-PyTorch Geometric (PyG)是PyTorch的一个几何深度学习扩展库。PyG囊括了在图和其他不规则结构上进行深度学习的各种方法。在图和其他不规则结构上进行深度学习也被称为几何深度学习。所囊括的方法来自各种已发表的论文。PyG内置了一个易于使用的mini-batch加载器，用于大量的通用基准数据集的加载。图数据集可以由节点数量非常多的单个图组成，也可以由数量非常多的节点数量较少的图组成。此外，PyG还集成了一些有用的数据转换工具。PyG既可以用于图的学习任务，也可以用于三维网格或点云的学习任务。
+[PyTorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/) (PyG)是面向几何深度学习的PyTorch的扩展库，几何深度学习指的是应用于图和其他不规则、非结构化数据的深度学习。基于PyG库，我们可以轻松地根据数据生成一个图对象，然后很方便的使用它；我们也可以容易地为一个图数据集构造一个数据集类，然后很方便的将它用于神经网络。
 
-通过此实践内容，我们将
+通过此节的实践内容，我们将
 
-1. 首先学习程序运行环境的配置。
-2. 接着学习PyG中图的表示及其使用，即PyG中`Data`类的学习。
-3. 最后学习PyG中图数据集的表示及其使用，即PyG中`Dataset`类的学习。
+1. 首先学习**程序运行环境的配置**。
+2. 接着学习**PyG中图数据的表示及其使用**，即学习PyG中`Data`类。
+3. 最后学习**PyG中图数据集的表示及其使用**，即学习PyG中`Dataset`类。
 
 ## 二、环境配置
 
-内容来源：[Installation — pytorch_geometric 1.7.0 documentation (pytorch-geometric.readthedocs.io)](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
-
-1. 使用`nvidia-smi`命令查询显卡驱动是否正确安装
+1. 使用`nvidia-smi`命令**查询显卡驱动是否正确安装**
 
 ![image-20210515204452045](images/image-20210515204452045.png)
 
-2. 安装正确版本的pytorch和cudatoolkit，此处安装1.8.1版本的pytorch和11.1版本的cudatoolkit
+2. 安装**正确版本的pytorch和cudatoolkit**，此处安装1.8.1版本的pytorch和11.1版本的cudatoolkit
+  
    1. `conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c nvidia`
    2. 确认是否正确安装，正确的安装应出现下方的结果
    ```txt
@@ -28,7 +27,7 @@ PyTorch Geometric (PyG)是PyTorch的一个几何深度学习扩展库。PyG囊�
    # 11.1
    ```
    
-3. 安装正确版本的PyG
+3. 安装**正确版本的PyG**
 
    ```txt
    pip install torch-scatter -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
@@ -38,13 +37,17 @@ PyTorch Geometric (PyG)是PyTorch的一个几何深度学习扩展库。PyG囊�
    pip install torch-geometric
    ```
 
-其他版本的安装方法以及安装过程中出现的大部分问题的解决方案可以在[内容来源](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)页面找到。
+**其他版本的安装方法**以及**安装过程中出现的大部分问题的解决方案**可以在[Installation of of PyTorch Geometric ](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)页面找到。
 
 ## 三、`Data`类——PyG中图的表示及其使用
 
-### `Data`对象的构造
+### `Data`对象的创建
 
-`Data`类的构造函数：
+`Data`类的官方文档为[torch_geometric.data.Data](https://pytorch-geometric.readthedocs.io/en/latest/modules/data.html#torch_geometric.data.Data)。
+
+#### 通过构造函数
+
+**`Data`类的构造函数**：
 
 ```python
 class Data(object):
@@ -71,15 +74,17 @@ class Data(object):
 
 ```
 
-`edge_index`的每一列定义一条边，其中第一行为边的起点，第二行为边的终点。这种表示方法被称为**COO格式（coordinate format）**，通常用于表示稀疏矩阵。PyG不是用稠密矩阵$\mathbf{A} \in \{ 0, 1 \}^{|\mathcal{V}| \times |\mathcal{V}|}$来持有邻接矩阵的信息，而是用仅存储邻接矩阵$\mathbf{A}$中非$0$元素的稀疏矩阵来表示图。
+`edge_index`的每一列定义一条边，其中第一行为边起始节点的索引，第二行为边结束节点的索引。这种表示方法被称为**COO格式（coordinate format）**，通常用于表示稀疏矩阵。PyG不是用稠密矩阵$\mathbf{A} \in \{ 0, 1 \}^{|\mathcal{V}| \times |\mathcal{V}|}$来持有邻接矩阵的信息，而是用仅存储邻接矩阵$\mathbf{A}$中非$0$元素的稀疏矩阵来表示图。
 
-通常，一个图至少包含`x, edge_index, edge_attr, y, num_nodes`5个属性，当图包含其他属性时，通过指定额外的参数，我们可以让`Data`对象包含其他的属性：
+通常，一个图至少包含`x, edge_index, edge_attr, y, num_nodes`5个属性，**当图包含其他属性时**，我们可以通**过指定额外的参数使`Data`对象包含其他的属性**：
 
 ```python
 graph = Data(x=x, edge_index=edge_index, edge_attr=edge_attr, y=y, num_nodes=num_nodes, other_attr=other_attr)
 ```
 
-可以将一个`dict`对象转换为一个`Data`对象：
+#### 转`dict`对象为`Data`对象
+
+我们也可以**将一个`dict`对象转换为一个`Data`对象**：
 
 ```python
 graph_dict = {
@@ -106,18 +111,18 @@ def from_dict(cls, dictionary):
     return data
 ```
 
-注意：`graph_dict`中值的类型与大小的要求与`Data`类的构造函数的要求相同。
+**注意**：`graph_dict`中属性值的类型与大小的要求与`Data`类的构造函数的要求相同。
 
 ### `Data`对象转换成其他类型数据
 
-也可以将`Data`对象转换为`dict`对象：
+我们可以将`Data`对象转换为`dict`对象：
 
 ```python
 def to_dict(self):
     return {key: item for key, item in self}
 ```
 
-或转换为`namedtuple`
+或转换为`namedtuple`：
 
 ```python
 def to_namedtuple(self):
@@ -138,7 +143,7 @@ x = graph_data['x']
 graph_data['x'] = x
 ```
 
-### 获取`Data`对象包含属性的关键字
+### 获取`Data`对象包含的属性的关键字
 
 ```python
 graph_data.keys()
@@ -177,11 +182,15 @@ print(f'Contains self-loops: {data.contains_self_loops()}')  # 此图是否包�
 print(f'Is undirected: {data.is_undirected()}')  # 此图是否是无向图
 ```
 
-## 三、`Dataset`类——PyG中图数据集的表示及其使用
+## 四、`Dataset`类——PyG中图数据集的表示及其使用
 
-PyG内置了大量常用的基准数据集，接下来我们用PyG中包含的`Planetoid`数据集来学习PyG中图数据集的表示及其使用。
+PyG内置了大量常用的基准数据集，接下来我们以PyG内置的`Planetoid`数据集为例，来**学习PyG中图数据集的表示及使用**。
 
-在PyG中，初始化一个数据集是简单直接的。初始化一个PyG内置的数据集，将自动下载其原始文件，并将其处理成包含`Data`对象的`Dataset`对象。
+`Planetoid`数据集类的官方文档为[torch_geometric.datasets.Planetoid](https://pytorch-geometric.readthedocs.io/en/latest/modules/datasets.html#torch_geometric.datasets.Planetoid)。
+
+### 生成数据集对象并分析数据集
+
+如下方代码所示，在PyG中生成一个数据集是简单直接的。**在第一次生成PyG内置的数据集时，程序首先下载原始文件，然后将原始文件处理成包含`Data`对象的`Dataset`对象并保存到文件。**
 
 ```python
 from torch_geometric.datasets import Planetoid
@@ -198,6 +207,8 @@ dataset.num_classes
 dataset.num_node_features
 # 1433
 ```
+
+### 分析数据集中样本
 
 可以看到该数据集只有一个图，包含7个分类任务，节点的属性为1433维度。
 
@@ -221,6 +232,37 @@ data.test_mask.sum().item()
 
 现在我们看到该数据集包含的唯一的图，有2708个节点，节点特征为1433维，有10556条边，有140个用作训练集的节点，有500个用作验证集的节点，有1000个用作测试集的节点。PyG内置的其他数据集，请小伙伴一一试验，以观察不同数据集的不同。
 
+### 数据集的使用
+
+假设我们定义好了一个图神经网络模型，其名为`Net`。在下方的代码中，我们展示了节点分类图数据集在训练过程中的使用。
+
+```python
+model = Net().to(device)
+data = dataset[0].to(device)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.01, weight_decay=5e-4)
+
+model.train()
+for epoch in range(200):
+    optimizer.zero_grad()
+    out = model(data)
+    loss = F.nll_loss(out[data.train_mask], data.y[data.train_mask])
+    loss.backward()
+    optimizer.step()
+
+```
+
 ## 结语
 
-通过此实践环节，我们学习了基于`Data`类的简单图的表示和使用，以及基于`Dataset`类的PyG内置数据集的表示和使用。在后面的内容中，我们将学习如何基于`Data`类表示复杂图，以及如何构造自己的数据集类并使用。
+通过此实践环节，我们学习了**程序运行环境的配置**、**PyG中`Data`对象的生成与使用**、以及**PyG中`Dataset`对象的表示和使用**。此节内容是图神经网络实践的基础，所涉及的内容是最常用、最基础的，在后面的内容中我们还将学到复杂`Data`类的构建，和复杂`Dataset`类的构建。
+
+## 作业
+
+- 请通过继承`Data`类实现一个类，专门用于表示“机构-作者-论文”的网络。该网络包含“机构“、”作者“和”论文”三类节点，以及“作者-机构“和“作者-论文“两类边。对要实现的类的要求：1）用不同的属性存储不同节点的属性；2）用不同的属性存储不同的边（边没有属性）；3）逐一实现获取不同节点数量的方法。
+
+## 参考资料
+
+- [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/)
+- [Installation of of PyTorch Geometric ](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
+- [torch_geometric.data.Data](https://pytorch-geometric.readthedocs.io/en/latest/modules/data.html#torch_geometric.data.Data)
+- [torch_geometric.datasets.Planetoid](https://pytorch-geometric.readthedocs.io/en/latest/modules/datasets.html#torch_geometric.datasets.Planetoid)
+
