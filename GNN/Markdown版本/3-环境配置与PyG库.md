@@ -56,7 +56,7 @@ class Data(object):
     r"""
     Args:
         x (Tensor, optional): 节点属性矩阵，大小为`[num_nodes, num_node_features]`
-        edge_index (LongTensor, optional): 边索引矩阵，大小为`[2, num_edges]`，第0行为尾节点，第1行为头节点，头指向尾
+        edge_index (LongTensor, optional): 边索引矩阵，大小为`[2, num_edges]`，第0行可称为头（head）节点、源（source）节点、邻接节点，第1行可称为尾（tail）节点、目标（target）节点、中心节点
         edge_attr (Tensor, optional): 边属性矩阵，大小为`[num_edges, num_edge_features]`
         y (Tensor, optional): 节点或图的标签，任意大小（，其实也可以是边的标签）
 	
