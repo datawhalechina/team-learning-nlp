@@ -6,8 +6,9 @@ from torch_geometric.datasets import Reddit, Reddit2
 from torch_geometric.data import ClusterData, ClusterLoader, NeighborSampler
 from torch_geometric.nn import SAGEConv
 
-dataset = Reddit('dataset/Reddit')
-# dataset = Reddit2('dataset/Reddit2')
+# 需要下载 https://data.dgl.ai/dataset/reddit.zip 到 data/Reddit 文件夹下
+dataset = Reddit('data/Reddit')
+# dataset = Reddit2('data/Reddit2')
 data = dataset[0]
 
 cluster_data = ClusterData(data, num_parts=1500, recursive=False,

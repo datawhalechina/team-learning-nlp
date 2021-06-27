@@ -1,3 +1,4 @@
+from logging import root
 import os.path as osp
 
 import torch
@@ -48,6 +49,7 @@ def train(data, model, optimizer):
     val_pos_edge_set = set(map(tuple, data.val_pos_edge_index.T.tolist()))
     test_pos_edge_set = set(map(tuple, data.test_pos_edge_index.T.tolist()))
     if (len(train_neg_edge_set & val_pos_edge_set) > 0) or (len(train_neg_edge_set & test_pos_edge_set) > 0):
+        # 训练集负样本与验证集负样本存在交集，或训练集负样本与测试集负样本存在交集
         print('wrong!')
 
     optimizer.zero_grad()
@@ -79,10 +81,7 @@ def test(data, model):
 
 def main():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    
-    dataset = 'Cora'
-    path = osp.join(osp.dirname(osp.realpath(__file__)), '..', 'data', dataset)
-    dataset = Planetoid(path, dataset, transform=T.NormalizeFeatures())
+    dataset = Planetoid(root='data', name='Cora', transform=T.NormalizeFeatures())
     data = dataset[0]
     ground_truth_edge_index = data.edge_index.to(device)
     data.train_mask = data.val_mask = data.test_mask = data.y = None
