@@ -4,11 +4,13 @@
 
 主要包括：
 
+- [情感分析](https://github.com/datawhalechina/team-learning-nlp/tree/master/EmotionalAnalysis)
 - [图神经网络](https://github.com/datawhalechina/team-learning-nlp/tree/master/GNN)
 - [自然语言处理入门](https://github.com/datawhalechina/team-learning-nlp/tree/master/IntroductionToNLP)
 - [自然语言处理实践（知识图谱）](https://github.com/datawhalechina/team-learning-nlp/tree/master/KnowledgeGraph_Basic)
 - [自然语言处理实践（新闻文本分类）](https://github.com/datawhalechina/team-learning-nlp/tree/master/NewsTextClassification)
 - [零基础入门语音识别（食物声音识别）](https://github.com/datawhalechina/team-learning-nlp/tree/master/FoodVoiceRecognition)
+- [统计自然语言处理（基于 python）](https://github.com/datawhalechina/team-learning-nlp/tree/master/StatisticalNLP)
 
 
 
